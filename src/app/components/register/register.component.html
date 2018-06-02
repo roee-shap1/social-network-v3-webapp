@@ -1,0 +1,10 @@
+<form action="">
+	<input type="text" [(ngModel)]="username" name="username" placeholder="Username" />
+	<input type="password" [(ngModel)]="password" name="password" placeholder="Password" />
+	<input type="password" [(ngModel)]="password2" name="password2" placeholder="Confirmation password" />
+	<input type="email" [(ngModel)]="email" name="email" placeholder="Email" />
+	<input type="text" [(ngModel)]="name" name="name" placeholder="Your name" />
+	<input type="radio" [(ngModel)]="gender" name="gender" value="male" />Male
+	<input type="radio" [(ngModel)]="gender" name="gender" value="female" />Female
+	<button type="button" (click)="registerUser()">Register</button>
+</form>
