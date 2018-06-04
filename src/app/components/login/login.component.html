@@ -1,5 +1,8 @@
-<form action="" *ngIf="!isLoggedIn()">
-	<input type="text" [(ngModel)]="username" name="username" placeholder="Username" />
-	<input type="password" [(ngModel)]="password" name="password" placeholder="Password" />
-	<button type="submit" (click)="login()">Login</button>
+<form class="form-signin">
+	<h1 class="h3 mb-3 font-weight-normal text-center">Please sign in</h1>
+	<label for="username" class="sr-only">Username</label>
+	<input id="username" [(ngModel)]="username" name="username" class="form-control" placeholder="Username" required="true" autofocus="" type="text" />
+	<label for="password" class="sr-only">Password</label>
+	<input id="password" [(ngModel)]="password" name="password" class="form-control" placeholder="Password" required="true" type="password" />
+	<button class="btn btn-lg btn-primary btn-block" (click)="login();">Sign in</button>
 </form>

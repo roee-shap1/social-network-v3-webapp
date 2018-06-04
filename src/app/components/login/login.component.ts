@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
 			.subscribe(data => {
 				if(!data) return;
 				if(data.error) console.error(data.error);
-				if(data.token && data.expiration) {
+				else if(data.token && data.expiration) {
 					window.localStorage.setItem('token', JSON.stringify(data.token));
 					window.localStorage.setItem('isAdmin', JSON.stringify(data.isAdmin));
 					window.localStorage.setItem('expiration', JSON.stringify(data.expiration));

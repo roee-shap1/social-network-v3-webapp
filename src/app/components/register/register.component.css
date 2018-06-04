@@ -1,0 +1,25 @@
+.form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+}
+
+.text-center {
+	text-align: center;
+}
+
+#username {
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+	margin: 1px;
+}
+#inputPassword, #inputPassword2, #email {
+	border-radius: 0%;
+	margin: 1px;
+}
+#name {
+	border-top-right-radius: 0;
+	border-top-left-radius: 0;
+	margin: 1px;
+}

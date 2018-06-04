@@ -1,10 +1,18 @@
-<form action="">
-	<input type="text" [(ngModel)]="username" name="username" placeholder="Username" />
-	<input type="password" [(ngModel)]="password" name="password" placeholder="Password" />
-	<input type="password" [(ngModel)]="password2" name="password2" placeholder="Confirmation password" />
-	<input type="email" [(ngModel)]="email" name="email" placeholder="Email" />
-	<input type="text" [(ngModel)]="name" name="name" placeholder="Your name" />
-	<input type="radio" [(ngModel)]="gender" name="gender" value="male" />Male
-	<input type="radio" [(ngModel)]="gender" name="gender" value="female" />Female
-	<button type="button" (click)="registerUser()">Register</button>
+<form class="form-signin">
+	<h1 class="h3 mb-3 font-weight-normal text-center">Please register</h1>
+	<label for="username" class="sr-only">Username</label>
+	<input id="username" [(ngModel)]="username" name="username" class="form-control" placeholder="Username" required="" autofocus="" type="text" />
+	<label for="inputPassword" class="sr-only">Password</label>
+	<input id="inputPassword" [(ngModel)]="password" name="password" class="form-control" placeholder="Password" required="" type="password" />
+	<label for="inputPassword2" class="sr-only">Confirm password</label>
+	<input id="inputPassword2" [(ngModel)]="password2" name="password2" class="form-control" placeholder="Confirm password" required="" type="password" />
+	<label for="email" class="sr-only">Email</label>
+	<input id="email" [(ngModel)]="email" name="email" class="form-control" placeholder="Email" required="" type="email" />
+	<label for="name" class="sr-only">Name</label>
+	<input id="name" [(ngModel)]="name" name="name" class="form-control" placeholder="Name" required="" type="text" />
+	<div class="radio mb-3 text-center">
+		<label><input type="radio" [(ngModel)]="gender" name="gender" value="male" /> Male </label>
+		<label><input type="radio" [(ngModel)]="gender" name="gender" value="female" /> Female </label>
+	</div>
+	<button class="btn btn-lg btn-primary btn-block" (click)="registerUser();">Sign in</button>
 </form>

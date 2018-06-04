@@ -17,6 +17,7 @@ import {Post} from '../../post';
 })
 
 export class DashboardComponent implements OnInit {
+	private existingUser: Boolean = true;
 	posts: Post[] = [];
 	users: User[] = [];
 

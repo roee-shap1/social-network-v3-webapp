@@ -1,13 +1,19 @@
 <div *ngIf="!isLoggedIn()">
-	<app-login></app-login>
-	<app-register></app-register>
+	<div *ngIf="existingUser">
+		<app-login></app-login>
+		<button class="btn btn-lg btn-primary btn-block" (click)="existingUser=false">Register Instead</button>
+	</div>
+	<div *ngIf="!existingUser">
+		<app-register></app-register>
+		<button class="btn btn-lg btn-primary btn-block" (click)="existingUser=true">Login Instead</button>
+	</div>
+</div>
+<div *ngIf="isLoggedIn()">
 	<ul *ngIf="posts">
 		<li *ngFor="let post of posts">
 			<app-post-details [post]="post"></app-post-details>
 		</li>
 	</ul>
-</div>
-<div *ngIf="isLoggedIn()">
-	<button type="button" (click)="logout();">Logout</button>
-	<a routerLink="/posts" routerLinkActive="active">View Posts</a>
+	<button class="btn btn-lg btn-primary btn-block" type="button" (click)="logout();">Logout</button>
+	<a class="btn btn-lg btn-primary btn-block" routerLink="/posts" routerLinkActive="active">View Posts</a>
 </div>
